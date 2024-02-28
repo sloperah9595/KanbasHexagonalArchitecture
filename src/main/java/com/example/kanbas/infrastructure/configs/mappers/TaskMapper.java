@@ -30,7 +30,7 @@ public class TaskMapper {
                 .id_task(model.getId())
                 .name(model.getName())
                 .description(model.getDescription())
-                .id_status(model.getStatus())
+                .id_status(StatusMapper.toEntity(model.getStatus()))
                 .idBoard(BoardMapper.toEntity(
                         model.getBoard()
                         )

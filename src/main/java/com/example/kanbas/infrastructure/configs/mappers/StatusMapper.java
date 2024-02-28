@@ -13,15 +13,10 @@ public class StatusMapper {
     }
 
     public static StatusEntity toEntity(StatusModel model) {
-        return StatusEntity.builder()
-                .id_status(model.getId())
-                .code(model.getCode())
-                .name(model.getName())
-                .description(model.getDescription())
-                .build();
+        return StatusEntity.findById(model.getId());
     }
 
     public static StatusModel toModel(StatusEntity entity) {
-        return StatusModel.findById(entity.getId_status());
+        return StatusModel.findById(entity.getId());
     }
 }

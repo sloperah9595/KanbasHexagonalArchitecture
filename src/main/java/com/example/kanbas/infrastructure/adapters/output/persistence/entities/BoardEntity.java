@@ -27,9 +27,9 @@ public class BoardEntity {
    //TODO: Llamar el entity, y volver le entity un enum
     @Enumerated(EnumType.STRING)
     @Column(name = "bd_status", length = 20)
-    private StatusModel bd_status;
+    private StatusEntity bd_status;
 
-    public BoardEntity(String bd_name, String bd_description, StatusModel bd_status) {
+    public BoardEntity(String bd_name, String bd_description, StatusEntity bd_status) {
         this.bdName = bd_name;
         this.bd_description = bd_description;
         this.bd_status = bd_status;

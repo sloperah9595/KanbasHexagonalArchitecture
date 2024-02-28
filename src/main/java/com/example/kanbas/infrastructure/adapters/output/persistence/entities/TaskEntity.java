@@ -26,12 +26,12 @@ public class TaskEntity {
     //TODO: Llamar el entity, y volver le entity un enum
     @Enumerated(EnumType.STRING)
     @Column(name = "bd_status", length = 20)
-    private StatusModel id_status;
+    private StatusEntity id_status;
     @ManyToOne
     @JoinColumn(name = "id_board")
     private BoardEntity idBoard;
 
-    public TaskEntity(String name, String description, StatusModel id_status, BoardEntity id_board) {
+    public TaskEntity(String name, String description, StatusEntity id_status, BoardEntity id_board) {
         this.name = name;
         this.description = description;
         this.id_status = id_status;
