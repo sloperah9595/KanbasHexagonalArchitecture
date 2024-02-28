@@ -21,7 +21,7 @@ public class BoardMapper {
                 .bd_id(model.getId())
                 .bdName(model.getName())
                 .bd_description(model.getDescription())
-                .bd_status(model.getStatus())
+                .bd_status(StatusMapper.toEntity(model.getStatus()))
                 .build();
     }
 
